@@ -1,0 +1,113 @@
+* {
+  margin: 0px;
+  padding: 0px ;
+}
+body {
+  background-color: #222222 !important;
+  color: white;
+}
+
+.container{
+  background-color: #222222;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #fdaa00;
+}
+
+.img1{
+
+  margin-top: 0px;
+  text-align: center;
+
+}
+.icons{
+  position: absolute;
+  margin-top: 350px;
+}
+.fb-link,.goo-link,.twr-link,.inst-link{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.fb-link{
+  margin-top: 0px;
+  margin-left: 3px;
+}
+.inst-link{
+  margin-top: 0px;
+  margin-left: 12px;
+}
+.goo-link{
+  margin-top: 5px;
+  margin-left: 9px;
+}
+
+.imageins_3{
+  margin-left: 365px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.fb-btn{
+  margin-left: 350px;
+}
+.tool-btn{
+  margin-left: 365px;
+}
+.fb-btn:hover{
+  border: 2px solid #e99c03;
+  border-radius:50%;
+
+}
+
+.tool-btn:hover{
+  border: 2px solid #e99c03;
+  border-radius:50%;
+}
+.post-btn:hover{
+  border: 2px solid #e99c03;
+  border-radius:50%;
+
+}
+
+.form1{
+  width: 550px;
+  text-align: center;
+  margin-left: 300px;
+}
+.user-posts{
+  text-align: center;
+  margin-top: 50px;
+}
+.userinput{
+  color: black;
+  margin-left: -125px;
+  height: 200px;
+  width: 800px;
+}
+.button1{
+  font-style: bold;
+  font-weight: bold;
+  padding: 5px 3px;
+  color: #222222;
+  border: 3px solid #e99c03;
+  background-color: #e99c03;
+}
+select{
+  background-color: #222222;
+}
+.form2{
+  text-align: center;
+}
+.selection{
+  height: 25px;
+  margin-left: 10px;
+
+}
+.button2{
+  margin-left: 5px;
+  font-style: bold;
+  font-weight: bold;
+  padding: 0px 3px;
+  color: #222222;
+  border: 3px solid #e99c03;
+  background-color: #e99c03;
+}

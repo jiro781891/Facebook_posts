@@ -1,0 +1,95 @@
+{% load static %}
+
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'fbposts/style.css' %}">
+
+  </head>
+
+
+  <body>
+    <div class = 'icons '></br>
+      <a href="http://www.twitter.com" target="_blank">
+          <img src="{% static 'fbposts/twtitterphoto.png' %}" alt="Twitter" width="50px" class ='twr-link' />
+      </a>
+        </br>
+      <a href="http://www.facebook.com" target="_blank">
+          <img src="{% static 'fbposts/facbooklogo.png' %}" alt="Facebook" width="70px" class = 'fb-link' />
+      </a>
+        </br>
+      <a href="http://www.instagram.com" target="_blank">
+          <img src="{% static 'fbposts/instagram-logo.png' %}" alt="instagram" width="50px" class = 'inst-link' />
+      </a>
+        </br>
+      <a href="https://plus.google.com/?hl=ru" target="_blank">
+          <img src="{% static 'fbposts/google+logo.png' %}" alt="Google" width="60px" class = 'goo-link' />
+      </a>
+    </div>
+
+    <div class = 'imageins_3'>
+      <a href = 'https://www.facebook.com/nikola.makiaveli.167'>
+        <img src="{% static 'fbposts/postsbutton.png' %}" alt="Posts" width="150px" class ='post-btn' >
+      </a>
+      <a href = 'https://www.facebook.com/'>
+        <img src="{% static 'fbposts/facbookbtn.png' %}" alt="Facebook" width="150px" class ='fb-btn'>
+      </a>
+      <a href = 'https://developers.facebook.com/tools/explorer'>
+        <img src="{% static 'fbposts/toolsbutton.png' %}" alt="Developers_Facebook" width="150px" class ='tool-btn' >
+      </a>
+    </div>
+
+
+
+    <div class="container">
+
+
+
+      <form action="{% url 'fetch_post' %}" method="post" class= "form1">
+        {% csrf_token %}
+          <div class="form-group">
+            <label for="comment"><h3>Write Text To Post On Facebook </h3></label></br>
+
+            <textarea class="form-control" rows="5" id="comment" name="postext" value="{{ user_post }}"  ></textarea>
+
+          </div>
+
+          <input type="submit" name="button-pressed" class = "button1"/>
+      </form>
+
+    </br>
+
+      <form action="{% url 'fetch_post' %}" method="get" class= "form2">
+        {% csrf_token %}
+        <label for="order"><h3>{{ user_name }} User posts in </h3></label>
+          <select name="dropdown" id = "order" class = 'selection'>
+
+            <option selected="selected" > Chronological Order </option>
+            <option value="reversed">Reversed Chronology</option>
+
+          </select>
+
+        <input type="submit" name="button-pressed" class = "button2"/>
+      </form>
+
+
+      <ul class = 'user-posts'>
+        {% for info in outputlist %}
+          <h1> {{ info }} </h1>
+        {% endfor %}
+      </ul>
+
+
+
+
+    </div>
+  </body>
+
+</html>
